@@ -1,0 +1,45 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Cache
+.cache/
+.pytest_cache/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Credentials (NEVER commit these)
+credentials.json
+api_keys.json
+secrets.yaml
