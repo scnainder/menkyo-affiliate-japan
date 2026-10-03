@@ -1,0 +1,470 @@
+<style>
+.jp-list-wrap{max-width:960px;margin:0 auto;padding:18px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.8;color:#111827}
+.jp-list-hero{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:22px;margin:0 0 18px}
+.jp-list-kicker{display:inline-block;background:#dbeafe;color:#1e3a8a;padding:6px 12px;border-radius:999px;font-size:14px;font-weight:800;margin:0 0 12px}
+.jp-list-lead{font-size:17px;color:#334155;margin:0 0 14px;max-width:760px}
+.jp-list-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.jp-list-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border-radius:8px;text-decoration:none!important;font-weight:800;border:1px solid #0f172a;background:#0f172a;color:#fff!important}
+.jp-list-btn.alt{background:#fff;color:#0f172a!important;border-color:#cbd5e1}
+.jp-list-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.jp-list-card{border:1px solid #e5e7eb;border-radius:8px;background:#fff;padding:16px;box-shadow:0 2px 10px rgba(15,23,42,.04)}
+.jp-list-card strong{display:block;color:#0f172a;margin-bottom:6px}
+.jp-list-card p{margin:0;color:#475569}
+.jp-list-note{background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:18px;margin:20px 0}
+.jp-list-note h2{font-size:22px;margin:0 0 8px;color:#111827}
+.jp-list-note p{margin:0 0 10px;color:#374151}
+.jp-list-nav{margin:20px 0 30px;padding:14px;background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px}
+.jp-list-nav p{margin:0 0 8px;color:#374151;font-weight:800}
+.jp-list-nav a{display:inline-flex;align-items:center;justify-content:center;padding:9px 14px;margin:4px;border:1px solid #cbd5e1;border-radius:999px;text-decoration:none;color:#0f172a;background:#fff;font-weight:800;font-size:14px}
+.jp-region-block{margin:30px 0;padding-top:8px;scroll-margin-top:24px}
+.jp-region-block h2{font-size:clamp(24px,5vw,30px);margin:0 0 6px;color:#111827;border-left:6px solid #f5b640;padding-left:12px}
+.jp-region-count{color:#64748b;margin:0 0 14px}
+.jp-pref-block{margin:18px 0;scroll-margin-top:24px}
+.jp-pref-block h3{font-size:20px;margin:20px 0 10px;color:#111827;border-bottom:1px solid #dce6ef;padding-bottom:6px}
+.jp-school-card{background:#fff;border:1px solid #dce6ef;border-top:5px solid #0f8b6f;border-radius:12px;padding:16px;margin:12px 0;box-shadow:0 4px 14px rgba(15,23,42,.05)}
+.jp-school-card h4{margin:0 0 8px;font-size:17px}
+.jp-school-card h4 a{color:#1267b2;text-decoration:none}
+.jp-school-card p{margin:0 0 6px;color:#475569;font-size:14px}
+.jp-school-btn{display:inline-block;margin-top:6px;padding:8px 14px;border-radius:6px;background:#0f172a;color:#fff!important;text-decoration:none!important;font-weight:700;font-size:13px}
+.jp-list-check{background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:18px;margin:34px 0}
+.jp-list-check h2{font-size:22px;margin:0 0 8px}
+.jp-list-check ul{margin:10px 0 0;padding-left:22px;color:#374151}
+.jp-list-check li{margin:7px 0}
+.jp-list-faq{background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:18px;margin:20px 0}
+.jp-list-faq h2{font-size:22px;margin:0 0 8px}
+.jp-list-faq h3{font-size:17px;margin:16px 0 6px}
+.jp-list-faq p{margin:0 0 10px;color:#374151}
+.jp-list-updated{font-size:14px;color:#64748b;margin:12px 0 0!important}
+@media(max-width:640px){.jp-list-wrap{padding:16px}.jp-list-hero{padding:18px}.jp-list-grid{grid-template-columns:1fr}.jp-list-actions{display:grid}.jp-list-btn{width:100%}}
+</style>
+<div class="jp-list-wrap">
+<h1>自動車学校リスト｜地域ごとの学校を比較できます</h1>
+
+<section class="jp-list-hero">
+<p class="jp-list-kicker">自動車学校 検索ツール</p>
+<p class="jp-list-lead"><strong>結論からお伝えします。</strong>自動車学校は家から一番近い場所である必要はありません。合宿免許なら、遠くの学校でも安く・早く免許を取得できます。値段も期間も学校によって大きく異なるので、しっかり比較してみましょう。</p>
+<p class="jp-list-lead">下に地域ごとの学校を掲載しています。表示している料金は目安です。時期・部屋タイプ・キャンペーンによって変わるため、お申し込み前に必ず詳細ページで最新情報をご確認ください。</p>
+<div class="jp-list-actions">
+<a class="jp-list-btn" href="#tohoku">地域から探す</a>
+<a class="jp-list-btn alt" href="/jp/">原付免許の説明に戻る</a>
+</div>
+<p class="jp-list-updated">最終更新：2026年</p>
+</section>
+
+<section class="jp-list-grid">
+<div class="jp-list-card">
+<p><strong>1. まず値段を確認する</strong></p>
+<p>安く見えても、部屋タイプ・食事・保証プランによって総額が変わります。よく確認しましょう。</p>
+</div>
+<div class="jp-list-card">
+<p><strong>2. 地元だけにこだわらない</strong></p>
+<p>都会より地方の学校の方が、静かで安いことが多いです。選択肢を広げてみましょう。</p>
+</div>
+<div class="jp-list-card">
+<p><strong>3. 申し込む前に確認する</strong></p>
+<p>空き状況・支払い方法・交通費補助は学校ごとに異なります。確認してからお申し込みください。</p>
+</div>
+</section>
+
+<section class="jp-list-note">
+<h2>お住まいの県だけにこだわらなくても大丈夫です</h2>
+<p>合宿免許は、必ずしも自分の県の学校から探す必要はありません。むしろ、他の県や地域の学校と比べてみるのがおすすめです。</p>
+<p>都会にお住まいの方ほど、地方の学校を選んだ方が安くて早いことが多いです。交通費を一部負担してくれる学校もあります。条件は学校によって異なるので、事前にしっかり確認しましょう。</p>
+</section>
+
+<nav class="jp-list-nav" aria-label="地域ナビゲーション">
+<p>地域から探す</p>
+<a href="#tohoku">東北</a><a href="#kanto">関東</a><a href="#chubu">中部</a><a href="#kansai">関西</a><a href="#chugoku">中国</a><a href="#shikoku">四国</a><a href="#kyushu-okinawa">九州・沖縄</a>
+</nav>
+
+<section id="tohoku" class="jp-region-block">
+<h2>東北</h2>
+<p class="jp-region-count">16校掲載</p>
+<section id="pref-iwate" class="jp-pref-block">
+<h3>岩手県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3NPM9X+8350D6+55OQ+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Frikuzentakata%2F" target="_blank" rel="sponsored nofollow noopener">Rikuzentakata Driving School</a></h4>
+<p><strong>都道府県：</strong>岩手県</p>
+<p><strong>料金目安：</strong>¥240,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3NPM9X+8350D6+55OQ+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Frikuzentakata%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftono%2F" target="_blank" rel="sponsored nofollow noopener">Tono Driving School</a></h4>
+<p><strong>都道府県：</strong>岩手県</p>
+<p><strong>料金目安：</strong>¥240,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftono%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://www.drivers-license.jp/school/hiraizumi/" target="_blank" rel="sponsored nofollow noopener">Hiraizumi Driving School</a></h4>
+<p><strong>都道府県：</strong>岩手県</p>
+<p><strong>料金目安：</strong>¥240,000〜</p>
+<a class="jp-school-btn" href="https://www.drivers-license.jp/school/hiraizumi/" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-akita" class="jp-pref-block">
+<h3>秋田県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fakita_noshiro%2F" target="_blank" rel="sponsored nofollow noopener">Noshiro Motor School</a></h4>
+<p><strong>都道府県：</strong>秋田県</p>
+<p><strong>料金目安：</strong>¥242,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fakita_noshiro%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fakita_nihoku%2F" target="_blank" rel="sponsored nofollow noopener">Dai 2 Hokubu Driving School</a></h4>
+<p><strong>都道府県：</strong>秋田県</p>
+<p><strong>料金目安：</strong>¥245,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fakita_nihoku%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fakita_hokubu%2F" target="_blank" rel="sponsored nofollow noopener">Hokubu Driving School</a></h4>
+<p><strong>都道府県：</strong>秋田県</p>
+<p><strong>料金目安：</strong>¥242,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fakita_hokubu%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-yamagata" class="jp-pref-block">
+<h3>山形県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmogami%2F" target="_blank" rel="sponsored nofollow noopener">Yamagata Mogami Driving School</a></h4>
+<p><strong>都道府県：</strong>山形県</p>
+<p><strong>料金目安：</strong>¥240,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmogami%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmatsuki_murayama%2F" target="_blank" rel="sponsored nofollow noopener">Matsuki Driving School Murayama</a></h4>
+<p><strong>都道府県：</strong>山形県</p>
+<p><strong>料金目安：</strong>¥213,637〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmatsuki_murayama%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmatsuki_yonezawa%2F" target="_blank" rel="sponsored nofollow noopener">Matsuki Driving School Yonezawa Matsumisaki</a></h4>
+<p><strong>都道府県：</strong>山形県</p>
+<p><strong>料金目安：</strong>¥213,637〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmatsuki_yonezawa%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmatsuki_taiyo%2F" target="_blank" rel="sponsored nofollow noopener">Matsuki Driving School Taiyo</a></h4>
+<p><strong>都道府県：</strong>山形県</p>
+<p><strong>料金目安：</strong>¥231,819〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmatsuki_taiyo%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmatsuki_sakuranbo%2F" target="_blank" rel="sponsored nofollow noopener">Matsuki Driving School Sakuranbo</a></h4>
+<p><strong>都道府県：</strong>山形県</p>
+<p><strong>料金目安：</strong>¥213,637〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmatsuki_sakuranbo%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmatsuki_nagai%2F" target="_blank" rel="sponsored nofollow noopener">Matsuki Driving School Nagai</a></h4>
+<p><strong>都道府県：</strong>山形県</p>
+<p><strong>料金目安：</strong>¥213,637〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmatsuki_nagai%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmatsuki_akayu%2F" target="_blank" rel="sponsored nofollow noopener">Matsuki Driving School Akayu</a></h4>
+<p><strong>都道府県：</strong>山形県</p>
+<p><strong>料金目安：</strong>¥204,546〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmatsuki_akayu%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-fukushima" class="jp-pref-block">
+<h3>福島県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fyumoto%2F" target="_blank" rel="sponsored nofollow noopener">Yumoto Driving School</a></h4>
+<p><strong>都道府県：</strong>福島県</p>
+<p><strong>料金目安：</strong>¥205,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fyumoto%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fnanko%2F" target="_blank" rel="sponsored nofollow noopener">Nanko Driving School</a></h4>
+<p><strong>都道府県：</strong>福島県</p>
+<p><strong>料金目安：</strong>See the detail page〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fnanko%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fnanko%2F" target="_blank" rel="sponsored nofollow noopener">Driving School</a></h4>
+<p><strong>都道府県：</strong>福島県</p>
+<p><strong>料金目安：</strong>¥234,546〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fnanko%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section>
+</section><section id="kanto" class="jp-region-block">
+<h2>関東</h2>
+<p class="jp-region-count">7校掲載</p>
+<section id="pref-ibaraki" class="jp-pref-block">
+<h3>茨城県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fomiya%2F" target="_blank" rel="sponsored nofollow noopener">Omiya Driving School</a></h4>
+<p><strong>都道府県：</strong>茨城県</p>
+<p><strong>料金目安：</strong>¥240,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fomiya%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftomobe%2F" target="_blank" rel="sponsored nofollow noopener">Tomobe Driving School</a></h4>
+<p><strong>都道府県：</strong>茨城県</p>
+<p><strong>料金目安：</strong>¥230,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftomobe%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-tochigi" class="jp-pref-block">
+<h3>栃木県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fnasu%2F" target="_blank" rel="sponsored nofollow noopener">Nasu Driving School</a></h4>
+<p><strong>都道府県：</strong>栃木県</p>
+<p><strong>料金目安：</strong>¥245,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fnasu%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fsakuranasu%2F" target="_blank" rel="sponsored nofollow noopener">Sakura Nasu Motor School</a></h4>
+<p><strong>都道府県：</strong>栃木県</p>
+<p><strong>料金目安：</strong>¥220,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fsakuranasu%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fokamotodai%2F" target="_blank" rel="sponsored nofollow noopener">Utsunomiya Okamoto Driving School</a></h4>
+<p><strong>都道府県：</strong>栃木県</p>
+<p><strong>料金目安：</strong>¥227,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fokamotodai%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-saitama" class="jp-pref-block">
+<h3>埼玉県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fkagohara%2F" target="_blank" rel="sponsored nofollow noopener">Kagohara Driving School</a></h4>
+<p><strong>都道府県：</strong>埼玉県</p>
+<p><strong>料金目安：</strong>¥240,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fkagohara%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-chiba" class="jp-pref-block">
+<h3>千葉県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Funakami%2F" target="_blank" rel="sponsored nofollow noopener">Unakami Central Driving School</a></h4>
+<p><strong>都道府県：</strong>千葉県</p>
+<p><strong>料金目安：</strong>¥230,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Funakami%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section>
+</section><section id="chubu" class="jp-region-block">
+<h2>中部</h2>
+<p class="jp-region-count">17校掲載</p>
+<section id="pref-niigata" class="jp-pref-block">
+<h3>新潟県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fnishishibata%2F" target="_blank" rel="sponsored nofollow noopener">Matsuki Driving School Niigata Nishishibata</a></h4>
+<p><strong>都道府県：</strong>新潟県</p>
+<p><strong>料金目安：</strong>¥231,819〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fnishishibata%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fsuibara%2F" target="_blank" rel="sponsored nofollow noopener">Suibara Driving School</a></h4>
+<p><strong>都道府県：</strong>新潟県</p>
+<p><strong>料金目安：</strong>¥210,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fsuibara%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fshirone%2F" target="_blank" rel="sponsored nofollow noopener">Shirone Central Driving School</a></h4>
+<p><strong>都道府県：</strong>新潟県</p>
+<p><strong>料金目安：</strong>¥225,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fshirone%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fsekiya%2F" target="_blank" rel="sponsored nofollow noopener">Niigata Sekiya Driving School</a></h4>
+<p><strong>都道府県：</strong>新潟県</p>
+<p><strong>料金目安：</strong>¥280,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fsekiya%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftagami%2F" target="_blank" rel="sponsored nofollow noopener">Tagami Driving School</a></h4>
+<p><strong>都道府県：</strong>新潟県</p>
+<p><strong>料金目安：</strong>¥239,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftagami%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftsubame%2F" target="_blank" rel="sponsored nofollow noopener">Tsubame Central Driving School</a></h4>
+<p><strong>都道府県：</strong>新潟県</p>
+<p><strong>料金目安：</strong>¥230,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftsubame%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fhigashi_niigata%2F" target="_blank" rel="sponsored nofollow noopener">Higashi-Niigata Driving School</a></h4>
+<p><strong>都道府県：</strong>新潟県</p>
+<p><strong>料金目安：</strong>¥203,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fhigashi_niigata%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-ishikawa" class="jp-pref-block">
+<h3>石川県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fkomatsu%2F" target="_blank" rel="sponsored nofollow noopener">Komatsu Driving School</a></h4>
+<p><strong>都道府県：</strong>石川県</p>
+<p><strong>料金目安：</strong>¥245,455〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fkomatsu%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-fukui" class="jp-pref-block">
+<h3>福井県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftsuruga%2F" target="_blank" rel="sponsored nofollow noopener">Tsuruga Driving School</a></h4>
+<p><strong>都道府県：</strong>福井県</p>
+<p><strong>料金目安：</strong>¥205,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftsuruga%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fobama%2F" target="_blank" rel="sponsored nofollow noopener">Obama Driving School</a></h4>
+<p><strong>都道府県：</strong>福井県</p>
+<p><strong>料金目安：</strong>¥205,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fobama%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-yamanashi" class="jp-pref-block">
+<h3>山梨県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftsuru%2F" target="_blank" rel="sponsored nofollow noopener">Tsuru Driving School</a></h4>
+<p><strong>都道府県：</strong>山梨県</p>
+<p><strong>料金目安：</strong>¥260,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftsuru%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fuenohara%2F" target="_blank" rel="sponsored nofollow noopener">Uenohara Driving School</a></h4>
+<p><strong>都道府県：</strong>山梨県</p>
+<p><strong>料金目安：</strong>¥260,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fuenohara%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-nagano" class="jp-pref-block">
+<h3>長野県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftenryu%2F" target="_blank" rel="sponsored nofollow noopener">Minami-Shinshu Tenryu Driving School</a></h4>
+<p><strong>都道府県：</strong>長野県</p>
+<p><strong>料金目安：</strong>¥210,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftenryu%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmaxchikuma%2F" target="_blank" rel="sponsored nofollow noopener">MAX Driving School Chikuma</a></h4>
+<p><strong>都道府県：</strong>長野県</p>
+<p><strong>料金目安：</strong>¥231,819〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmaxchikuma%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-shizuoka" class="jp-pref-block">
+<h3>静岡県</h3>
+<article class="jp-school-card">
+<h4><a href="https://www.drivers-license.jp/school/susochu/" target="_blank" rel="sponsored nofollow noopener">Susono Central Driving School</a></h4>
+<p><strong>都道府県：</strong>静岡県</p>
+<p><strong>料金目安：</strong>¥307,000〜</p>
+<a class="jp-school-btn" href="https://www.drivers-license.jp/school/susochu/" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fsizuokaken_seibu%2F" target="_blank" rel="sponsored nofollow noopener">Shizuoka Prefecture Seibu Driving School</a></h4>
+<p><strong>都道府県：</strong>静岡県</p>
+<p><strong>料金目安：</strong>¥235,910〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fsizuokaken_seibu%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fkakegawa%2F" target="_blank" rel="sponsored nofollow noopener">Kakegawa Driving School</a></h4>
+<p><strong>都道府県：</strong>静岡県</p>
+<p><strong>料金目安：</strong>¥235,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fkakegawa%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section>
+</section><section id="kansai" class="jp-region-block">
+<h2>関西</h2>
+<p class="jp-region-count">1校掲載</p>
+<section id="pref-wakayama" class="jp-pref-block">
+<h3>和歌山県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmagio_wakayama%2F" target="_blank" rel="sponsored nofollow noopener">Magio Drivers School Wakayama School</a></h4>
+<p><strong>都道府県：</strong>和歌山県</p>
+<p><strong>料金目安：</strong>¥270,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmagio_wakayama%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section>
+</section><section id="chugoku" class="jp-region-block">
+<h2>中国</h2>
+<p class="jp-region-count">6校掲載</p>
+<section id="pref-tottori" class="jp-pref-block">
+<h3>鳥取県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fsanin_chuou%2F" target="_blank" rel="sponsored nofollow noopener">San&amp;#8217;in Chuo Driving School</a></h4>
+<p><strong>都道府県：</strong>鳥取県</p>
+<p><strong>料金目安：</strong>¥220,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fsanin_chuou%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftottori_tobu%2F" target="_blank" rel="sponsored nofollow noopener">Tottori Prefecture Eastern Driving School</a></h4>
+<p><strong>都道府県：</strong>鳥取県</p>
+<p><strong>料金目安：</strong>¥225,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Ftottori_tobu%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-shimane" class="jp-pref-block">
+<h3>島根県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fyasugi%2F" target="_blank" rel="sponsored nofollow noopener">Yasugi Driving School</a></h4>
+<p><strong>都道府県：</strong>島根県</p>
+<p><strong>料金目安：</strong>¥225,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fyasugi%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmatsueshimane%2F" target="_blank" rel="sponsored nofollow noopener">Matsue-Shimane Driving School</a></h4>
+<p><strong>都道府県：</strong>島根県</p>
+<p><strong>料金目安：</strong>¥212,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fmatsueshimane%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-hiroshima" class="jp-pref-block">
+<h3>広島県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fyasugi%2F" target="_blank" rel="sponsored nofollow noopener">Yasugi Driving School (second listing)</a></h4>
+<p><strong>都道府県：</strong>広島県</p>
+<p><strong>料金目安：</strong>¥225,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fyasugi%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fbinan%2F" target="_blank" rel="sponsored nofollow noopener">Binan Driving School</a></h4>
+<p><strong>都道府県：</strong>広島県</p>
+<p><strong>料金目安：</strong>¥205,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fbinan%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section>
+</section><section id="shikoku" class="jp-region-block">
+<h2>四国</h2>
+<p class="jp-region-count">2校掲載</p>
+<section id="pref-kagawa" class="jp-pref-block">
+<h3>香川県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fkanonji%2F" target="_blank" rel="sponsored nofollow noopener">Kannonji Driving School</a></h4>
+<p><strong>都道府県：</strong>香川県</p>
+<p><strong>料金目安：</strong>¥190,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fkanonji%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-kochi" class="jp-pref-block">
+<h3>高知県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fsukumo%2F" target="_blank" rel="sponsored nofollow noopener">Sukumo Driving School</a></h4>
+<p><strong>都道府県：</strong>高知県</p>
+<p><strong>料金目安：</strong>¥236,819〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fsukumo%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section>
+</section><section id="kyushu-okinawa" class="jp-region-block">
+<h2>九州・沖縄</h2>
+<p class="jp-region-count">5校掲載</p>
+<section id="pref-nagasaki" class="jp-pref-block">
+<h3>長崎県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fkyoritsu_emukae%2F" target="_blank" rel="sponsored nofollow noopener">Kyoritsu Driving School Emukae</a></h4>
+<p><strong>都道府県：</strong>長崎県</p>
+<p><strong>料金目安：</strong>¥200,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fkyoritsu_emukae%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fkyoritsu_ono%2F" target="_blank" rel="sponsored nofollow noopener">Kyoritsu Driving School Ono</a></h4>
+<p><strong>都道府県：</strong>長崎県</p>
+<p><strong>料金目安：</strong>¥200,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fkyoritsu_ono%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fkyoritsu_hino%2F" target="_blank" rel="sponsored nofollow noopener">Kyoritsu Driving School Hino</a></h4>
+<p><strong>都道府県：</strong>長崎県</p>
+<p><strong>料金目安：</strong>¥200,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fkyoritsu_hino%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section><section id="pref-kumamoto" class="jp-pref-block">
+<h3>熊本県</h3>
+<article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fnakakuma%2F" target="_blank" rel="sponsored nofollow noopener">Nakakuma Motor School</a></h4>
+<p><strong>都道府県：</strong>熊本県</p>
+<p><strong>料金目安：</strong>¥225,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fnakakuma%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article><article class="jp-school-card">
+<h4><a href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fhitoyoshi%2F" target="_blank" rel="sponsored nofollow noopener">Hitoyoshi Driving School</a></h4>
+<p><strong>都道府県：</strong>熊本県</p>
+<p><strong>料金目安：</strong>¥215,000〜</p>
+<a class="jp-school-btn" href="https://px.a8.net/svt/ejp?a8mat=3HOUDN+5XQNQ2+2C9M+BW0YB&a8ejpredirect=https%3A%2F%2Fdrivers-license.jp%2Fschool%2Fhitoyoshi%2F" target="_blank" rel="sponsored nofollow noopener">詳しく見る →</a>
+</article>
+</section>
+</section>
+
+<section class="jp-list-check">
+<h2>お申し込み前に確認しましょう</h2>
+<ul>
+<li>料金に含まれるもの・含まれないものを確認する</li>
+<li>入校できる日程が自分の予定と合っているか確認する</li>
+<li>支払い方法（一括・分割）を確認する</li>
+<li>交通費補助があるか、条件は何か確認する</li>
+<li>キャンセル・変更のルールを確認する</li>
+</ul>
+</section>
+
+<section class="jp-list-faq">
+<h2>よくある質問</h2>
+
+<h3>Q. 一番安い学校を選べばいいですか？</h3>
+<p>A. 安さだけで決めないほうがよいでしょう。日程・部屋タイプ・アクセスも含めて、自分に合うかどうかで選ぶことをおすすめします。</p>
+
+<h3>Q. 申し込みはここから直接できますか？</h3>
+<p>A. 「詳しく見る」を押すと学校の公式ページに移動します。お申し込みはそちらで完結します。</p>
+
+<h3>Q. 料金が変わることはありますか？</h3>
+<p>A. あります。時期やキャンペーンによって変わることがあります。ここに掲載している価格は目安としてご利用ください。最終確認は各学校のページで行ってください。</p>
+</section>
+
+</div>

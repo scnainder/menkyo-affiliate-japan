@@ -84,17 +84,33 @@ ask the owner to generate the link in the A8 menu and paste it into column S.
 |---|---|
 | Google Sheet (above) | Source of truth. 53 rows, all match the pattern. |
 | `scnainder/menkyo-school-match` `schools.json` (match.menkyo.me, all funnels) | **Synced.** 52 entries (51 of the 52 schools on the list page, plus `matsuki_akayu`), merged in PR #8 (commit `30bef0d`). `maxchikuma` intentionally excluded. `starting_price` = sheet column G. |
-| WordPress menkyo.me, Japanese page `/jp/list/` (`/jp/` has no school links) | **Not fixed yet.** Audit below. Needs WordPress access. |
+| WordPress menkyo.me, Japanese page `/jp/list/` (page ID 382; `/jp/` = page 381 has no school links) | **Synced 2026-10-03.** 52 schools, 108 A8 links (2 per card), all equal to sheet column M, 0 plain links, click-tested. Details in section 4a. |
 | Other WordPress pages (`/en/`, `/ne/`, `/bd/`, `/id-...`, school pages) | Not audited. |
 | `scnainder/menkyo-affiliate-japan` `web/` | Scaffold with placeholder data (`https://example.com`). **Not** an affiliate source. |
 
-WordPress `/jp/list/` audit (public HTML, 52 of 53 sheet schools present, each link appears twice):
+### 4a. WordPress `/jp/list/` (done 2026-10-03)
 
-- 48 links: correct `a8mat` but destination `https://drivers-license.jp/...` (no `www`, https). One Find & Replace fixes them: `https%3A%2F%2Fdrivers-license.jp` -> `http%3A%2F%2Fwww.drivers-license.jp`.
-- `rikuzentakata`: different `a8mat` (`3NPM9X+8350D6+55OQ+BW0YB`) and no `www`. Replace with the sheet link.
-- `hiraizumi`, `susochu`: plain `https://www.drivers-license.jp/school/...` links with no A8 tracking. They earn nothing. Replace with the sheet links.
-- `kanonjiwest`: missing from the page.
-- `maxchikuma`: present, but its source page errors (see below). Remove or hide it for now.
+Before: 0 of 52 schools matched the pattern (48 used `https://drivers-license.jp`; `rikuzentakata` had a different
+`a8mat`; `hiraizumi` and `susochu` were plain links with no tracking; `kanonjiwest` was missing; `maxchikuma` present).
+Changes made to page 382 (links only, plus the two list changes below):
+
+- All A8 destinations now `http://www.drivers-license.jp/...`; `rikuzentakata` uses the standard `a8mat`; `hiraizumi` and `susochu` now use A8 links from the sheet.
+- Removed the `maxchikuma` card (source page returns HTTP 500; owner said skip for now). Chubu count 17 -> 16.
+- Added a `kanonjiwest` card ("Kannonji Driving School West", Kagawa, from ¥190,000, sheet link). Shikoku count 2 -> 3.
+- Verified on the public page: 108 A8 links, 0 pattern mismatches, 0 plain links, 52 unique schools, all click-tested.
+- Rollback: WordPress revision 392 (2026-08-27) or `docs/backups/menkyo-me-jp-list-page382-before-2026-10-03.html`.
+
+Not changed, but wrong or inconsistent (content, not links): a second `nanko` card named just "Driving School" (price ¥234,546); a second `yasugi` card "Yasugi Driving School (second listing)" labelled Hiroshima; card prices (料金目安) differ from sheet column G for several schools (for example `susochu` ¥307,000 vs ¥288,000). Ask the owner before changing them.
+
+### 4b. How WordPress is edited
+
+menkyo.me is self-hosted WordPress (Rank Math). The Claude cloud environment "Default" provides the variables
+`WP_SITE_URL`, `WP_USERNAME`, `WP_PASSWORD` (an application login for an administrator). Never print or commit their values.
+Edit pages through the REST API, for example `GET/POST $WP_SITE_URL/wp-json/wp/v2/pages/<id>` with basic auth
+(`context=edit` returns the raw HTML in `content.raw`). Procedure: read the raw content, save a backup, build the change
+offline, verify it with the pattern check, POST only `content`, read it back, then re-audit the public page.
+The Japanese pages are plain HTML (no blocks): links are `href="https://px.a8.net/svt/ejp?...&a8ejpredirect=..."` on the school name and on the "詳しく見る" button.
+The WordPress.com connector in claude.ai is not needed and may not work for this self-hosted site. The English, Nepali, Bangladeshi and Indonesian pages are not audited yet.
 
 ## 5. Source site facts
 
@@ -111,7 +127,7 @@ WordPress `/jp/list/` audit (public HTML, 52 of 53 sheet schools present, each l
 3. **Stop and let the owner review the sheet.** Do not touch repos or WordPress before they say it is fixed.
 4. Propagate:
    - `menkyo-school-match` `schools.json`: copy the link from column M, `starting_price` from column G (tax-excluded), English `school_name`/`title`, English `prefecture`, and one of the 8 app regions (`Hokkaido`, `Tohoku`, `Kanto`, `Chubu`, `Kansai`, `Chugoku`, `Shikoku`, `Kyushu / Okinawa`; Niigata, Nagano, Yamanashi, Ishikawa, Fukui and Shizuoka are `Chubu`). Keep the same keys as existing entries and `unknown` for feature flags. Follow that repo's `AGENTS.md` (synthetic tests only, no auto-deploy).
-   - WordPress: needs owner-approved access. Never paste credentials into chat, Git or logs.
+   - WordPress: use the environment credentials as in section 4b. Never paste credentials into chat, Git or logs.
 5. Open a PR. **Merging `menkyo-school-match` to `main` deploys to production** (Cloudflare Pages), so merge only when the owner says so.
 6. Update the status table in section 4 of this file.
 
@@ -135,7 +151,8 @@ WordPress `/jp/list/` audit (public HTML, 52 of 53 sheet schools present, each l
 
 ## 9. Open items
 
-- Fix WordPress `/jp/list/` (section 4); audit the other WordPress pages.
+- Audit the other WordPress pages (`/en/`, `/ne/`, `/bd/`, `/id-...`, school pages) with the same procedure as section 4a.
+- Decide what to do with the content problems listed in section 4a (duplicate cards, card prices).
 - `maxchikuma`: add once its page works and the price is known.
 - Ask the owner to generate a few more links in the A8 menu to widen the pattern evidence.
 - `menkyo-school-match` has a failing `Workers Builds` check that also fails on earlier merged PRs. It is a stale Cloudflare Workers integration, not caused by data changes. The real deploy check is `Cloudflare Pages`.
