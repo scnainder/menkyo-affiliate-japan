@@ -83,7 +83,7 @@ ask the owner to generate the link in the A8 menu and paste it into column S.
 | Place | Status |
 |---|---|
 | Google Sheet (above) | Source of truth. 53 rows, all match the pattern. |
-| `scnainder/menkyo-school-match` `schools.json` (match.menkyo.me, all funnels) | **Synced.** 52 schools, merged in PR #8 (commit `30bef0d`). `maxchikuma` intentionally excluded. `starting_price` = sheet column G. |
+| `scnainder/menkyo-school-match` `schools.json` (match.menkyo.me, all funnels) | **Synced.** 52 entries (51 of the 52 schools on the list page, plus `matsuki_akayu`), merged in PR #8 (commit `30bef0d`). `maxchikuma` intentionally excluded. `starting_price` = sheet column G. |
 | WordPress menkyo.me, Japanese page `/jp/list/` (`/jp/` has no school links) | **Not fixed yet.** Audit below. Needs WordPress access. |
 | Other WordPress pages (`/en/`, `/ne/`, `/bd/`, `/id-...`, school pages) | Not audited. |
 | `scnainder/menkyo-affiliate-japan` `web/` | Scaffold with placeholder data (`https://example.com`). **Not** an affiliate source. |
