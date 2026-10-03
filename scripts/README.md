@@ -258,3 +258,10 @@ main "$@"
 For more information, see:
 - Project Plan: `docs/PROJECT_PLAN.md`
 - Contributing Guide: `docs/CONTRIBUTING.md`
+
+### Affiliate scripts (`scripts/affiliate/`)
+
+See `docs/AFFILIATE_LINKS.md` before using these.
+
+- `check_affiliate_links.py`: validates A8 links against the canonical pattern and (with `--click`) follows each redirect.
+- `scrape_drivers_license.py`: scrapes the drivers-license.jp school list into JSON/CSV (`pip install requests beautifulsoup4 lxml`).
