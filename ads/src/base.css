@@ -1,0 +1,9 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{font-family:"IPAGothic","IPAPGothic","Noto Sans CJK JP",sans-serif;color:#1b2430;position:relative;line-height:1.35}
+.b{-webkit-text-stroke:.035em currentColor;letter-spacing:.01em}
+.pr{position:absolute;top:36px;right:44px;font-size:26px;padding:4px 16px;border:2px solid currentColor;border-radius:6px;opacity:.75}
+.brand{position:absolute;left:60px;bottom:44px;display:flex;align-items:center;gap:14px;font-size:30px}
+.brand i{width:48px;height:48px;border-radius:10px;background:#1d5fa8;color:#fff;font-style:normal;display:grid;place-items:center;font-size:28px}
+.cta{position:absolute;left:60px;right:60px;bottom:120px;height:128px;border-radius:24px;background:#fcd200;color:#1b2430;display:flex;align-items:center;justify-content:center;gap:18px;font-size:50px;box-shadow:0 10px 0 #c9a600}
+.cta small{font-size:30px;display:block;font-weight:400;-webkit-text-stroke:0}
