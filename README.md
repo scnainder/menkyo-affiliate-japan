@@ -12,6 +12,8 @@ This project focuses on:
 - **Goal**: Connect drivers with quality driving schools through affiliate partnerships
 - **Revenue Model**: Commission-based affiliate marketing
 
+> **Working on affiliate links?** Read [`AGENTS.md`](AGENTS.md) and [`docs/AFFILIATE_LINKS.md`](docs/AFFILIATE_LINKS.md) first.
+
 ### Key Features (Planned)
 
 - 🎯 Affiliate Dashboard & Analytics
