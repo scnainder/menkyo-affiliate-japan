@@ -84,17 +84,51 @@ ask the owner to generate the link in the A8 menu and paste it into column S.
 |---|---|
 | Google Sheet (above) | Source of truth. 53 rows, all match the pattern. |
 | `scnainder/menkyo-school-match` `schools.json` (match.menkyo.me, all funnels) | **Synced.** 52 entries (51 of the 52 schools on the list page, plus `matsuki_akayu`), merged in PR #8 (commit `30bef0d`). `maxchikuma` intentionally excluded. `starting_price` = sheet column G. |
-| WordPress menkyo.me, Japanese page `/jp/list/` (`/jp/` has no school links) | **Not fixed yet.** Audit below. Needs WordPress access. |
-| Other WordPress pages (`/en/`, `/ne/`, `/bd/`, `/id-...`, school pages) | Not audited. |
+| WordPress menkyo.me, Japanese page `/jp/list/` (page ID 382; `/jp/` = page 381 has no school links) | **Synced 2026-10-03.** 52 schools, 108 A8 links (2 per card), all equal to sheet column M, 0 plain links, click-tested. Details in section 4a. |
+| Other WordPress pages (`/en/`, `/ne/`, `/bd/`, `/id-...`, school pages) | **Synced 2026-10-03.** All 42 published pages audited: 410 A8 links, all equal to the pattern, 0 plain school/form links, 0 links to the ended programs, every unique link click-tested to the exact school page. Details in section 4c. |
 | `scnainder/menkyo-affiliate-japan` `web/` | Scaffold with placeholder data (`https://example.com`). **Not** an affiliate source. |
 
-WordPress `/jp/list/` audit (public HTML, 52 of 53 sheet schools present, each link appears twice):
+### 4a. WordPress `/jp/list/` (done 2026-10-03)
 
-- 48 links: correct `a8mat` but destination `https://drivers-license.jp/...` (no `www`, https). One Find & Replace fixes them: `https%3A%2F%2Fdrivers-license.jp` -> `http%3A%2F%2Fwww.drivers-license.jp`.
-- `rikuzentakata`: different `a8mat` (`3NPM9X+8350D6+55OQ+BW0YB`) and no `www`. Replace with the sheet link.
-- `hiraizumi`, `susochu`: plain `https://www.drivers-license.jp/school/...` links with no A8 tracking. They earn nothing. Replace with the sheet links.
-- `kanonjiwest`: missing from the page.
-- `maxchikuma`: present, but its source page errors (see below). Remove or hide it for now.
+Before: 0 of 52 schools matched the pattern (48 used `https://drivers-license.jp`; `rikuzentakata` had a different
+`a8mat`; `hiraizumi` and `susochu` were plain links with no tracking; `kanonjiwest` was missing; `maxchikuma` present).
+Changes made to page 382 (links only, plus the two list changes below):
+
+- All A8 destinations now `http://www.drivers-license.jp/...`; `rikuzentakata` uses the standard `a8mat`; `hiraizumi` and `susochu` now use A8 links from the sheet.
+- Removed the `maxchikuma` card (source page returns HTTP 500; owner said skip for now). Chubu count 17 -> 16.
+- Added a `kanonjiwest` card ("Kannonji Driving School West", Kagawa, from ¥190,000, sheet link). Shikoku count 2 -> 3.
+- Verified on the public page: 108 A8 links, 0 pattern mismatches, 0 plain links, 52 unique schools, all click-tested.
+- Rollback: WordPress revision 392 (2026-08-27) or `docs/backups/menkyo-me-jp-list-page382-before-2026-10-03.html`.
+
+Content issues listed here before (duplicate `nanko`/`yasugi` cards, card prices) were fixed on 2026-10-03 together with the other pages (section 4c).
+
+### 4c. All other WordPress pages (done 2026-10-03)
+
+Edited 22 more pages through the REST API (23 pages in total with `/jp/list/`). Rollback: WordPress revisions, and
+`docs/backups/menkyo-me-pages-before-bulk-edit-2026-10-03.json.gz` (original raw HTML of every edited page).
+
+- **Every A8 link to drivers-license.jp now follows the pattern** (standard `a8mat`, `http://www` destination). Found and fixed:
+  - `a8mat=3NPM9X+8350D6+55OQ+BW0YB` on `rikuzentakata` cards. That material **redirects to coreda.jp, not to the school**, so those links never reached drivers-license.jp.
+  - `a8mat=3HOUDN+5XQMYA+2C9M+BW0YB` (49 links on `/en-gasshuku-driving-camps-list/`, 3 on a Nepali region page). It is valid and the same program (A8 id ...10921001), but it is not the sheet's material, so it was normalised to the sheet pattern.
+  - Plain `drivers-license.jp` links (school pages and application forms) on the Bengali list and the school pages: converted to A8 links (they earned nothing).
+  - A8 parameters in reverse order (`a8ejpredirect` first) on one page.
+- **Ended programs.** dream-licence.jp, menkyolive.net and mylicense.co.jp are no longer on A8 (owner confirmed). Their links were replaced by drivers-license.jp links; a school that is not on drivers-license.jp was deleted.
+  - `/en-gasshuku-driving-camps-list/`: 26 schools removed (22 dream-licence, 4 menkyolive), plus `Ohno` (`/school/ono/` 301-redirects to Tsuruga), `Magio Kagoshima` (404), `Japan Sea` (`nihonkai`, 404), `Omachi` (`oomachi`, 404) and `MAX Chikuma`. The Hokkaido & Tohoku price range sentence was recomputed.
+  - Five MyLicense-based articles (`/en/cheap-gasshuku-menkyo-under-250000yen-japan/`, `/en/summer-gasshuku-menkyo-japan-international-students/`, `/ne/cheap-gasshuku-menkyo-under-250000yen-nepalese-students-japan/`, `/ne/summer-gasshuku-menkyo-ranking-nepalese-students-japan/`, `/ne/foreign-students-gasshuku-menkyo-mylicense-nepal-interview/`): only links and school entries were changed (owner chose this option). Kept: Suibara, Sakura Nasu, Omiya, Tenryu. MyLicense pages with no counterpart now point to drivers-license.jp pages (`/otoku/`, `/contact/`, home). **The prose still says "MyLicense source" and quotes MyLicense prices.** Rewrite these articles from drivers-license.jp data when there is time.
+  - Affiliate Disclosure page (ID 406): "mylicense.co.jp and" removed. **That page is a draft (unpublished)**; it was a draft before and its status was not changed.
+- **Lists in EN and NE** got the same card fixes as `/jp/list/`: duplicate `nanko` and `yasugi` ("second listing", Hiroshima) cards removed, `maxchikuma` removed, `kanonjiwest` added, card prices set from sheet column G, region counts recomputed (15/7/16/1/5/3/5 = 52). `/ne/chubu-...` lost its `MAX Chikuma` section and table row (sections renumbered).
+- Not changed: links to non-school pages on drivers-license.jp that are plain references (`/faq/`, `/point/`, `/otoku/` as text links); BD list was only converted to A8 links (8 schools).
+- Final audit of the public pages: 42 published pages, 410 A8 links, 0 mismatches, 52 unique schools, 57 unique links all land on the exact page with the `a8=` parameter.
+
+### 4b. How WordPress is edited
+
+menkyo.me is self-hosted WordPress (Rank Math). The Claude cloud environment "Default" provides the variables
+`WP_SITE_URL`, `WP_USERNAME`, `WP_PASSWORD` (an application login for an administrator). Never print or commit their values.
+Edit pages through the REST API, for example `GET/POST $WP_SITE_URL/wp-json/wp/v2/pages/<id>` with basic auth
+(`context=edit` returns the raw HTML in `content.raw`). Procedure: read the raw content, save a backup, build the change
+offline, verify it with the pattern check, POST only `content`, read it back, then re-audit the public page.
+The Japanese pages are plain HTML (no blocks): links are `href="https://px.a8.net/svt/ejp?...&a8ejpredirect=..."` on the school name and on the "詳しく見る" button.
+The WordPress.com connector in claude.ai is not needed and may not work for this self-hosted site. The English, Nepali, Bangladeshi and Indonesian pages are not audited yet.
 
 ## 5. Source site facts
 
@@ -111,7 +145,7 @@ WordPress `/jp/list/` audit (public HTML, 52 of 53 sheet schools present, each l
 3. **Stop and let the owner review the sheet.** Do not touch repos or WordPress before they say it is fixed.
 4. Propagate:
    - `menkyo-school-match` `schools.json`: copy the link from column M, `starting_price` from column G (tax-excluded), English `school_name`/`title`, English `prefecture`, and one of the 8 app regions (`Hokkaido`, `Tohoku`, `Kanto`, `Chubu`, `Kansai`, `Chugoku`, `Shikoku`, `Kyushu / Okinawa`; Niigata, Nagano, Yamanashi, Ishikawa, Fukui and Shizuoka are `Chubu`). Keep the same keys as existing entries and `unknown` for feature flags. Follow that repo's `AGENTS.md` (synthetic tests only, no auto-deploy).
-   - WordPress: needs owner-approved access. Never paste credentials into chat, Git or logs.
+   - WordPress: use the environment credentials as in section 4b. Never paste credentials into chat, Git or logs.
 5. Open a PR. **Merging `menkyo-school-match` to `main` deploys to production** (Cloudflare Pages), so merge only when the owner says so.
 6. Update the status table in section 4 of this file.
 
@@ -135,7 +169,9 @@ WordPress `/jp/list/` audit (public HTML, 52 of 53 sheet schools present, each l
 
 ## 9. Open items
 
-- Fix WordPress `/jp/list/` (section 4); audit the other WordPress pages.
+- Rewrite the five MyLicense-based articles from drivers-license.jp data (section 4c); their prose still cites MyLicense.
+- Decide whether to publish the Affiliate Disclosure page (ID 406, currently a draft).
+- Card prices on the Bengali list and other pages not driven by the sheet may still differ from sheet column G.
 - `maxchikuma`: add once its page works and the price is known.
 - Ask the owner to generate a few more links in the A8 menu to widen the pattern evidence.
 - `menkyo-school-match` has a failing `Workers Builds` check that also fails on earlier merged PRs. It is a stale Cloudflare Workers integration, not caused by data changes. The real deploy check is `Cloudflare Pages`.
